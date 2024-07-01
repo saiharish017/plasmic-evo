@@ -36,7 +36,7 @@ const LanguageSwitcher = ({ style }) => {
     <div style={style} className="relative inline-block text-left" ref={dropdownRef}>
       <button
         id="dropdownUsersButton"
-        className="text-black bg-white hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-white dark:hover:bg-blue-700 dark:focus:gray flex gap-2"
+        className="text-black bg-slate-100 hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-white dark:hover:bg-blue-700 dark:focus:gray flex gap-2"
         type="button"
         onClick={toggleDropdown}
       >

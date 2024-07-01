@@ -19,7 +19,7 @@ export default function CustomApp({ Component, pageProps }) {
       
     >
       <Component {...pageProps} />
-      <LanguageSwitcher style={{ position: 'fixed', bottom: "10px", right: "50px"}}/>
+      <LanguageSwitcher style={{ position: 'fixed', bottom: "10px", right: "25px"}}/>
 
       
     
