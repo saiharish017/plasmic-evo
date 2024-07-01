@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         port: 587,
         auth: {
           user: 'apikey', // This is the "user" for SendGrid's SMTP
-          pass: process.env.NEXT_PUBLIC_SENDGRID_API_KEY, // API Key
+          pass: process.env.SENDGRID_API_KEY, // API Key
         },
       });
 
