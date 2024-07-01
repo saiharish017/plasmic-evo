@@ -80,17 +80,17 @@ const getFormSchema = (locale: Locale) => {
     phoneNumber: z.string().min(10, {
       message: t.errors.phoneNumber,
     }),
-    message: z.string().optional(),
+    Message: z.string().optional(),
   });
 };
 export default function ProfileForm() {
   const { locale } = useRouter();
   const currentLocale = locale || 'en'; // Fallback to 'en' if locale is undefined
-  const t = translations[currentLocale];
+  const t = translations[currentLocale as keyof typeof translations];
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [submitFailed, setsubmitFailed] = useState(false);
   const [isFormVisible, setFormVisible] = useState(true);
-  const formSchema = getFormSchema(currentLocale);
+  const formSchema = getFormSchema(currentLocale as keyof typeof translations);
  
 
 
