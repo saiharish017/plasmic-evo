@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
-      const { firstname, email, Message } = req.body;
+      const { firstname,lastname, email, phoneNumber, Message } = req.body;
 
       let transporter = nodemailer.createTransport({
         host: 'smtp.sendgrid.net',
@@ -16,11 +16,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
 
       let info = await transporter.sendMail({
-        from: 'test@example.com', // sender address
+        from: `${email}`, // sender address
         to: 'saiharish017@gmail.com', // list of receivers
         subject: 'New Form Submission', // Subject line
         text: `Name: ${firstname}\nEmail: ${email}\nMessage: ${Message}`, // plain text body
-        html: `<b>Name:</b> ${firstname}<br><b>Email:</b> ${email}<br><b>Message:</b> ${Message}`, // html body
+        html: `<b>Frist Name:</b> ${firstname}<b>Last Name:</b>${lastname}<br><b>Phone Number:</b> ${phoneNumber}<br><b>Email:</b> ${email}<br><b>Message:</b> ${Message}`, // html body
       });
 
       console.log('Message sent: %s', info.messageId);

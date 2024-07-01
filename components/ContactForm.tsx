@@ -122,7 +122,7 @@ export default function ProfileForm() {
     // ✅ This will be type-safe and validated.
     console.log(values)
     try {
-      const response = await fetch('/api/send-emai', {
+      const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
