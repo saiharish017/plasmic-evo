@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       let info = await transporter.sendMail({
         from: `${email}`, // sender address
-        to: 'saiharish017@gmail.com', // list of receivers
+        to: 'a.alberici@evolutivo.it', // list of receivers
         subject: 'New Form Submission', // Subject line
         text: `Name: ${firstname}\nEmail: ${email}\nMessage: ${Message}`, // plain text body
         html: `<b>Frist Name:</b> ${firstname}<b>Last Name:</b>${lastname}<br><b>Phone Number:</b> ${phoneNumber}<br><b>Email:</b> ${email}<br><b>Message:</b> ${Message}`, // html body
